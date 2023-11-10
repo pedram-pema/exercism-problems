@@ -33,7 +33,7 @@
 /**
  * The number of minutes it takes to prepare a single layer.
  */
-const PREPARATION_MINUTES_PER_LAYER = 40;
+const PREPARATION_MINUTES_PER_LAYER = 2;
 
 /**
  * Determines the number of minutes the lasagna still needs to remain in the
