@@ -70,7 +70,16 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  
-  
 
+let timeTaken = 0;
+const copyArr = [...orders];
+
+let i = 0;
+do {
+  let timePerOrder = timeToMixJuice(copyArr[i]);
+  timeTaken += timePerOrder;
+  i++;
+} while (i < copyArr.length && timeTaken < timeLeft);
+
+return copyArr.slice(i); // Return remaining orders
 }
